@@ -1,0 +1,34 @@
+
+// Import partial files
+@import 'config';
+
+// General Styles
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-stack;
+  line-height: 1.6;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+ul {
+  list-style: none;
+}
+
+h2, h3, h4 {
+  text-transform: uppercase;
+}
+
+// Keep all images in their containers!
+img {
+  width: 100%;
+}
