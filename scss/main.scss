@@ -1,6 +1,6 @@
-
 // Import partial files
 @import 'config';
+@import 'utilities';
 
 // General Styles
 
@@ -9,8 +9,13 @@
   padding: 0;
 }
 
+html {
+  font-size: 18px;
+}
+
 body {
   font-family: $font-stack;
+  font-size: 1rem;
   line-height: 1.6;
   background: #fff;
 }
@@ -24,11 +29,87 @@ ul {
   list-style: none;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
   text-transform: uppercase;
 }
 
 // Keep all images in their containers!
 img {
   width: 100%;
+}
+
+// Logo
+
+#logo {
+  width: 70px;
+  height: 70px;
+  // In case we want to replace the logo image with text
+  color: #fff;
+  text-transform: uppercase;
+}
+
+// Main Nav
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+  padding-top: 1rem;
+
+  ul {
+    display: flex;
+  }
+
+  li{
+    padding: 1rem 1.5rem;
+  }
+
+  a {
+    color: #fff;
+    text-transform: uppercase;
+    // This border will show up on hover
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    // Transition for the border color to change on hover
+    transition: border-color 0.5s;
+
+    // On hover the border color will transition
+    &:hover {
+      border-color: $med-color;
+    }
+
+    // Class of current needs a border on it
+    &.current {
+      border-color: $main-color;
+    }
+  }
+}
+
+// Header ---------------
+
+#header {
+  // Header Home
+  &-home {
+    background: $bg-img;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #fff;
+
+    // Center the header content
+    .header-content {
+      text-align: center;
+      padding-top: 20%;
+
+      h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+      }
+    }
+  }
+  &-inner {
+
+  }
 }
