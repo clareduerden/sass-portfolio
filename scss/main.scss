@@ -165,4 +165,58 @@ img {
       }
     }
   }
+
+  // Home Section C
+  &-c {
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1.5rem;
+      text-align: center;
+
+      // process-icon styling
+      &-icon {
+        position: relative;
+        color: #fff;
+        background: $dark-color;
+        padding: 2rem;
+        // Make the circle
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        // transition
+        transition: all 1s;
+
+        &:hover {
+          background: $main-color;
+          width: 90px;
+          height: 90px;
+          line-height: 90px;
+
+          .process-step {
+            background: $dark-color;
+          }
+        }
+      }
+
+      // process-step numbers to hover at top right of each icon
+      &-step {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 28px;
+        background: $main-color;
+        // Make the circle around each step number
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        padding: 1rem;
+        line-height: 15px;
+        // Transition
+        transition: all 1s;
+      }
+    }
+  }
 }
