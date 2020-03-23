@@ -168,6 +168,8 @@ img {
 
   // Home Section C
   &-c {
+    padding-bottom: 5rem;
+
     .process {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -177,8 +179,8 @@ img {
       // process-icon styling
       &-icon {
         position: relative;
-        color: #fff;
         background: $dark-color;
+        color: set-text-color($dark-color);
         padding: 2rem;
         // Make the circle
         border-radius: 50%;
@@ -197,6 +199,7 @@ img {
 
           .process-step {
             background: $dark-color;
+            color: set-text-color($dark-color);
           }
         }
       }
@@ -208,6 +211,7 @@ img {
         right: 0;
         font-size: 28px;
         background: $main-color;
+        color: set-text-color($main-color);
         // Make the circle around each step number
         border-radius: 50%;
         height: 15px;
@@ -219,4 +223,39 @@ img {
       }
     }
   }
+}
+
+// Footer --------------
+
+#main-footer {
+  background: $dark-color;
+  color: #fff;
+  height: 5rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    // Height must fill the container and then align center
+    height: 100%;
+    align-items: center;
+
+    // Social icons
+    .social .fab {
+      margin-right: 1rem;
+      border: 2px #fff solid;
+      // Make the circle
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      padding: 0.5rem;
+      text-align: center;
+      transition: all 1s;
+
+      &:hover {
+        background: $main-color;
+      }
+    }
+  }
+
 }
