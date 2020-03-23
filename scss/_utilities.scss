@@ -1,4 +1,5 @@
-// Page container class
+// Containers ----------
+
 .container {
   max-width: $website-width;
   padding: 0 1.5rem;
@@ -6,7 +7,7 @@
   overflow: hidden;
 }
 
-// Buttons
+// Button Styling ----------
 
 %btn-shared {
   display: inline-block;
@@ -44,6 +45,8 @@ input[class^="btn-"]:hover {
   background: $main-color;
 }
 
+// Text and Line Classes -------------
+
 .lead {
   font-size: 1.3rem;
   margin-bottom: 2rem;
@@ -51,4 +54,29 @@ input[class^="btn-"]:hover {
 
 .text-center {
   text-align: center;
+}
+
+.bottom-line {
+  width: 5%;
+  margin: auto;
+  border: $main-color 3px solid;
+  margin-top: 0.5rem;
+}
+
+// Padding Classes ----------
+
+.py {
+  &-1 { padding: 1rem 0; }
+  &-2 { padding: 2rem 0; }
+  &-3 { padding: 3rem 0; }
+  &-4 { padding: 4rem 0; }
+}
+
+// Margin Classes -------------
+
+.my {
+  &-1 { padding: 1rem 0; }
+  &-2 { padding: 2rem 0; }
+  &-3 { padding: 3rem 0; }
+  &-4 { padding: 4rem 0; }
 }

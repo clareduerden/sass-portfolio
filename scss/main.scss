@@ -113,3 +113,18 @@ img {
 
   }
 }
+
+// Home Sections -----------------
+
+#home {
+  &-a {
+    .specials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+    }
+    .fas {
+      color: $main-color;
+    }
+  }
+}
