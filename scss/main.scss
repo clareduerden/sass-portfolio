@@ -2,7 +2,7 @@
 @import 'config';
 @import 'utilities';
 
-// General Styles
+// General Styles --------------
 
 * {
   margin: 0;
@@ -35,12 +35,12 @@ h4 {
   text-transform: uppercase;
 }
 
-// Keep all images in their containers!
+// Keep all images in their containers
 img {
   width: 100%;
 }
 
-// Logo
+// Logo -------------------
 
 #logo {
   width: 70px;
@@ -50,7 +50,8 @@ img {
   text-transform: uppercase;
 }
 
-// Main Nav
+// Main Nav ----------------
+
 #main-nav {
   display: flex;
   justify-content: space-between;
@@ -117,6 +118,8 @@ img {
 // Home Sections -----------------
 
 #home {
+
+  // Home Section A
   &-a {
     .specials {
       display: grid;
@@ -125,6 +128,41 @@ img {
     }
     .fas {
       color: $main-color;
+    }
+  }
+
+  // Home Section B
+
+  &-b {
+    // Create 4 col grid
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      div {
+        padding: 3rem 0;
+
+        // Alternating colors for the div boxes
+        &:nth-child(odd) {
+          background: $light-color;
+        }
+        &:nth-child(even) {
+          background: $med-color;
+        }
+      }
+    }
+
+    // Increase font size for key stats info
+    li {
+      line-height: 2;
+
+      &.stats-title {
+        font-size: 1.5rem;
+      }
+      &.stats-number {
+        font-size: 2rem;
+        font-size: bold;
+      }
     }
   }
 }
