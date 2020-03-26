@@ -48,6 +48,7 @@ img {
   // In case we want to replace the logo image with text
   color: #fff;
   text-transform: uppercase;
+  z-index: 1;
 }
 
 // Main Nav ----------------
@@ -60,6 +61,7 @@ img {
 
   ul {
     display: flex;
+    z-index: 1;
   }
 
   li{
@@ -110,12 +112,33 @@ img {
       }
     }
   }
+  // Header for inner website pages
   &-inner {
+    position: relative;
+    background: $bg-img;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 20% 34%;
+    height: 10vh;
+    color: #fff;
+    border-bottom: $main-color 3px solid;
 
+    // Give the header inner a dark overlay
+    &:before {
+      content: '';
+      position: absolute;
+      background: $dark-color;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+    }
+  
   }
 }
 
-// Home Sections -----------------
+// Homepage Sectionn -----------------
 
 #home {
 
@@ -221,6 +244,42 @@ img {
         // Transition
         transition: all 1s;
       }
+    }
+  }
+}
+
+//  About Page sections --------------
+
+#about {
+  &-a {
+    .about-info {
+      display: grid;
+      grid-template-areas:
+        'bio-img bio bio'
+        'aw1 aw2 aw3';
+      grid-gap: 1.2rem;
+    }
+    // Assign all of the grid areas to sections of the page
+    .bio-img {
+      grid-area: bio-img;
+    }
+    .bio {
+      grid-area: bio;
+      border-left: 3px $main-color solid;
+      padding: 0.6rem;
+    }
+    .award-1 {
+      grid-area: aw1;
+    }
+    .award-2 {
+      grid-area: aw2;
+    }
+    .award-3 {
+      grid-area: aw3;
+    }
+    i.fas {
+      color: $main-color;
+      margin: 1rem;
     }
   }
 }

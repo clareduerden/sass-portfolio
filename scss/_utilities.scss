@@ -45,6 +45,27 @@ input[class^="btn-"]:hover {
   background: $main-color;
 }
 
+// Backgrounds using function to set text color ----------
+
+.bg {
+  &-main {
+    background: $main-color;
+    color: set-text-color($main-color);
+  }
+  &-dark {
+    background: $dark-color;
+    color: set-text-color($dark-color);
+  }
+  &-light {
+    background: $light-color;
+    color: set-text-color($light-color);
+  }
+  &-med {
+    background: $med-color;
+    color: set-text-color($med-color);
+  }
+}
+
 // Text and Line Classes -------------
 
 .lead {
