@@ -251,6 +251,7 @@ img {
 //  About Page sections --------------
 
 #about {
+  // About Section A
   &-a {
     .about-info {
       display: grid;
@@ -280,6 +281,28 @@ img {
     i.fas {
       color: $main-color;
       margin: 1rem;
+    }
+  }
+
+  // About Section B
+  &-b {
+    .progress-area {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .progress {
+      height: 20px;
+      background: $med-color;
+      overflow: hidden;
+      border-radius: 5px;
+      margin-bottom: 0.6rem;
+
+      div {
+        height: 100%;
+        background: $main-color;
+        color: set-text-color($main-color);
+        text-align: center;
+      }
     }
   }
 }

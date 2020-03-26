@@ -270,6 +270,22 @@ img {
   color: #ffbc00;
   margin: 1rem; }
 
+#about-b .progress-area {
+  width: 80%;
+  margin: 0 auto; }
+
+#about-b .progress {
+  height: 20px;
+  background: #ccc;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 0.6rem; }
+  #about-b .progress div {
+    height: 100%;
+    background: #ffbc00;
+    color: #fff;
+    text-align: center; }
+
 #main-footer {
   background: #333;
   color: #fff;
