@@ -1,6 +1,7 @@
 // Import partial files
 @import 'config';
 @import 'utilities';
+@import 'item-grid';
 
 // General Styles --------------
 
@@ -292,7 +293,7 @@ img {
     }
 
     .progress {
-      height: 20px;
+      height: 30px;
       background: $med-color;
       overflow: hidden;
       border-radius: 5px;
@@ -303,6 +304,11 @@ img {
         background: $main-color;
         color: set-text-color($main-color);
         text-align: center;
+        transition: all 1s;
+
+        &:hover {
+          border: $light-color 1px solid;
+        }
       }
     }
   }
