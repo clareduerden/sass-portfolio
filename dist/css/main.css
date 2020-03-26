@@ -286,6 +286,37 @@ img {
     color: #fff;
     text-align: center; }
 
+#about-c .about-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem; }
+  #about-c .about-logos img {
+    width: 70%; }
+
+#about-d .testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem; }
+  #about-d .testimonials ul {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  #about-d .testimonials p {
+    background: #ccc;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    transition: all 1s; }
+    #about-d .testimonials p:hover {
+      background: #ffbc00;
+      padding: 1rem 1.5rem; }
+  #about-d .testimonials img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    border: 1px solid #ffbc00; }
+
 #main-footer {
   background: #333;
   color: #fff;
