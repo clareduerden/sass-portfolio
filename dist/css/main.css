@@ -4,7 +4,7 @@
   margin: auto;
   overflow: hidden; }
 
-.btn-main, .btn-light {
+.btn-main, .btn-light, .btn-dark {
   display: inline-block;
   padding: 0.7rem 1.5rem;
   transition: all 0.5s;
@@ -20,9 +20,9 @@
   color: #f4f4f4;
   background: #333; }
 
-.btn-main {
-  color: #333;
-  background: #ffbc00; }
+.btn-dark {
+  color: #f4f4f4;
+  background: #333; }
 
 button[class^="btn-"]:hover,
 a[class^="btn-"]:hover,
@@ -65,6 +65,12 @@ input[class^="btn-"]:hover {
   width: 3rem;
   border: #ffbc00 3px solid;
   margin: 0 auto 1rem auto; }
+
+input,
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.8rem; }
 
 .py-1 {
   padding: 1rem 0; }
@@ -385,6 +391,35 @@ img {
     border-radius: 50%;
     margin-right: 1rem;
     border: 1px solid #ffbc00; }
+
+#contact-a .text-fields {
+  display: grid;
+  grid-template-areas: 'name1 email' 'subject phone' 'message message';
+  grid-gap: 1.2rem;
+  margin-bottom: 1.2rem; }
+  #contact-a .text-fields .name-input {
+    grid-area: name1; }
+  #contact-a .text-fields .subject-input {
+    grid-area: subject; }
+  #contact-a .text-fields .email-input {
+    grid-area: email; }
+  #contact-a .text-fields .phone-input {
+    grid-area: phone; }
+  #contact-a .text-fields .message-input {
+    grid-area: message;
+    height: 100px; }
+  #contact-a .text-fields .text-input {
+    padding: 0.5rem 1rem; }
+
+#contact-a button[type="submit"] {
+  width: 50%;
+  font-size: 0.8rem; }
+
+#contact-b .contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  text-align: center; }
 
 #main-footer {
   background: #333;

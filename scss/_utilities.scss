@@ -30,10 +30,10 @@
     color: $light-color;
     background: $dark-color;
   }
-  &-main {
+  &-dark {
     @extend %btn-shared;
-    color: $dark-color;
-    background: $main-color;
+    color: $light-color;
+    background: $dark-color;
   }
 }
 
@@ -94,6 +94,14 @@ input[class^="btn-"]:hover {
   margin: 0 auto 1rem auto;
 }
 
+// Forms and Inputs
+
+input,
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
 
 // Padding Classes ----------
 
