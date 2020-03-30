@@ -1,0 +1,190 @@
+// Tablets & Smaller - 800px and smaller
+
+@media(max-width: 800px) {
+
+  // Make some Grids just 2 cols to improve spacing ------------
+  #home-a .specials,
+  #home-c .process,
+  .items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  // Homeppage --------
+  #header {
+    &-home {
+      height: 30rem;
+
+      .header-content {
+        padding-top: 5rem;
+
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    &-inner {
+      height: 5.5rem;
+    }
+  }
+
+} // End of Tablet Media Query
+
+
+// Smartphones - Max width of 580px --------------------------
+
+@media(max-width: 580px) {
+
+  // General Styles -------
+  .lead {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  // Main Nav --------
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+
+    li {
+      padding: 0.8rem;
+    }
+  }
+
+  // Header ---------
+  #header {
+    &-home {
+      height: 10rem;
+      border-bottom: $main-color 3px solid;
+  
+      // Don't display the header contents on smartphones
+      .header-content {
+        display: none;
+      }
+    }
+
+    &-inner {
+      height: 10rem;
+      background-position: center;
+
+      // Remove the dark overlay for the inner header so it matches the home
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  // Stack Grids on all pages ------------
+  #home-a .specials,
+  #home-b .stats,
+  #home-c .process,
+  #about-c .about-logos,
+  #about-d .testimonials,
+  #contact-b .contact-info,
+  .items {
+    grid-template-columns: 1fr;
+  }
+
+  // Homepage -----------------
+  #home {
+    &-a {
+      .specials div {
+        padding-top: 1rem;
+        border-top: 1px $med-color solid;
+      }
+    }
+
+    &-b {
+      .stats div {
+        padding: 2rem 0 1rem 0;
+      }
+    }
+  }
+
+  // About page sections ----------
+  #about {
+
+    &-a {
+      // Rearrange the grid template areas to be 1 col and reduce spacing
+      .about-info {
+        grid-template-areas:
+          'bio-img'
+          'bio'
+          'aw1'
+          'aw2' 
+          'aw3';
+        grid-gap: 1rem;
+      }
+    }
+
+    // Remove the section with the logos completely 
+    &-c {
+      display: none;
+    }
+  }
+
+  // Contact page sections -----------------
+  #contact {
+    &-a {
+      .text-fields {
+        grid-template-areas:
+        'name1'
+        'email'
+        'subject'
+        'phone'
+        'message';
+      }
+    }
+
+    // Improve the look of the contact-info items when stacked
+    &-b {
+      .contact-info div {
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;;
+        border-bottom: 1px $light-color dotted;
+
+        &:last-child {
+          border: none;
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+  // Footer ----------------
+  #main-footer {
+    height: 7rem;
+
+    // Stack footer contents vertically and space
+    .footer-content {
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+
+} //End of the Smartphone Media Query
+
+
+// Media Query for landscape smartphones - 400px or less ---------------
+
+@media(max-height:580px) {
+
+  #header {
+    &-home {
+      .header-content {
+        padding-top: 2rem;
+
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}

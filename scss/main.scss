@@ -65,7 +65,7 @@ img {
     z-index: 1;
   }
 
-  li{
+  li {
     padding: 1rem 1.5rem;
   }
 
@@ -101,6 +101,8 @@ img {
     background-position: center;
     height: 100vh;
     color: #fff;
+    // Hide any content that accidentally overflows
+    // overflow: hidden;
 
     // Center the header content
     .header-content {
@@ -133,7 +135,7 @@ img {
       left: 0;
       width: 100%;
       height: 100%;
-      opacity: 0.5;
+      opacity: 0.3;
     }
   
   }
@@ -453,3 +455,6 @@ img {
   }
 
 }
+
+// Import Media Queries at the very end
+@import 'media';
